@@ -2,3 +2,12 @@ body {
     background-color: #6f897d;
 }
 
+.cards-container {
+    padding: 10px;
+    margin: 3em;
+}
+
+.card-styling {
+    padding: 5px;
+    margin: 33px;
+}

@@ -11,51 +11,55 @@ import { testPost } from '../api/index.js';
 export default function PlantCard() {
   // you'll want props to put your info into the title, img, ect - that info may come from app, not here
   return (
-    <div className="">
+    <div className="cards-container">
       <Card sx={{ maxWidth: 345 }}>
-        <CardMedia
-          component="img"
-          height="140"
-          image=""
-          alt=""
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            Fiddle Leaf Fig
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            
-          </Typography>
-        </CardContent>
-        <CardActions>
-          {/* 
+        <div className="card-styling">
+          <CardMedia
+            component="img"
+            height="140"
+            image=""
+            alt=""
+          />
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+              Fiddle Leaf Fig
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              
+            </Typography>
+          </CardContent>
+          <CardActions>
+            {/* 
 
-            Back End:
-              backEndFunc(plantWatered)
-                  let NewWaterDate = today
-                  mongodb wayToWriteYourUser'sNewWaterDate // This is to store for the user for next time
-          */}
-          <Button size="small" onClick={testPost}>Watered</Button>
-          <Button size="small">Learn More</Button>
-        </CardActions>
-        <CardMedia
-          component="img"
-          height="140"
-          image=""
-          alt=""
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            Neon Pothos
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            
-          </Typography>
-        </CardContent>
-        <CardActions>
-          <Button size="small" onClick={testPost}>Watered</Button>
-          <Button size="small">Learn More</Button>
-        </CardActions>
+              Back End:
+                backEndFunc(plantWatered)
+                    let NewWaterDate = today
+                    mongodb wayToWriteYourUser'sNewWaterDate // This is to store for the user for next time
+            */}
+            <Button size="small" onClick={testPost}>Watered</Button>
+            <Button size="small">Learn More</Button>
+          </CardActions>
+        </div>
+        <div className="card-styling">
+          <CardMedia
+            component="img"
+            height="140"
+            image=""
+            alt=""
+          />
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+              Neon Pothos
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              
+            </Typography>
+          </CardContent>
+          <CardActions>
+            <Button size="small" onClick={testPost}>Watered</Button>
+            <Button size="small">Learn More</Button>
+          </CardActions>
+        </div>
       </Card>
     </div>
   );
