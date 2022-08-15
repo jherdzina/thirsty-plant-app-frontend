@@ -1,5 +1,5 @@
 body {
-    background-color: #6f897d;
+    background-color: #e5e5e5; 
 }
 
 .cards-container {
@@ -8,6 +8,6 @@ body {
 }
 
 .card-styling {
-    padding: 5px;
-    margin: 33px;
+    padding: 20px;
+    margin: 30px;
 }
