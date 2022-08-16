@@ -39,14 +39,24 @@ function pickImg(plant) {
 }
 
 export default function PlantCard(props) {
+
   const testBackendPost = function sendPlantDetails() {
+    let d = new Date();
+    d.getTime();
+  
+    d = d.toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+      weekday: 'short',
+    })
     let plantDetails = {
       "altPlantName": props.altPlantName,
       "plantName": props.plantName,
       "roomLocated": props.roomLocated,
-      "wateredLast": props.wateredLast,
+      "wateredLast": d,
     }
-    testPost(plantDetails)
+    testPost(plantDetails, d)
   }
   const addToUser = function addPlantToUser() {
     let plantDetails = {

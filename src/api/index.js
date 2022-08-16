@@ -1,8 +1,6 @@
 import plantWatered from '../utilities/userfront.js'
 
-export function testPost(plant) {
-  const d = new Date();
-  d.getTime();
+export function testPost(plant, d) {
     let url = 'https://afternoon-savannah-22384.herokuapp.com/plants';
     var response = fetch(url, {
       method: 'GET',
