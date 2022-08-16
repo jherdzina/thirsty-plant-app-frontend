@@ -23,9 +23,8 @@ export default function App() {
           />
         ))
     } else {
-      return <div></div>
+      return <div/>
     }
-
   }
   return (
     <div>
