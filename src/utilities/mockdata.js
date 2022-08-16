@@ -19,7 +19,7 @@ export var plantTwo = {
 export var plantThree = {
     "plantId": 3,
     "plantName": "Fiddle Leaf Fig",
-    "altPlantName": "Ficus lyrata",
+    "altPlantName": "Ficus Lyrata",
     "imgURL": '../assets/images/fiddleleaf-unsplash.jpg',
     "roomLocated": "Dining room",
     "wateredLast": "July 28"
@@ -28,7 +28,7 @@ export var plantThree = {
 export var plantFour = {
     "plantId": 4,
     "plantName": "String of Pearls",
-    "altPlantName": "Senecio rowleyanus",
+    "altPlantName": "Senecio Rowleyanus",
     "imgURL": '../assets/images/stringofpearls-unsplash.jpg',
     "roomLocated": "Living room",
     "wateredLast": "August 1"
