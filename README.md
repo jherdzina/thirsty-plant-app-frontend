@@ -21,3 +21,4 @@
 ### Super Stretch Goals (after class goal)
 ##### Hook up to a plant API
 ##### Give your plants alias' or names (Fred the Fiddle Leaf Fig)
+##### Plant Favicon: <a href="https://www.vecteezy.com/free-vector/nature">Nature Vectors by Vecteezy</a>, https://www.vecteezy.com/vector-art/3224916-ficus-lyrata-commonly-known-as-the-fiddle-leaf-fig-tree

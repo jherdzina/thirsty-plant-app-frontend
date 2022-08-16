@@ -1,5 +1,3 @@
-
-
 export var plantOne = {
     "plantId": 1,
     "plantName": "Pothos",

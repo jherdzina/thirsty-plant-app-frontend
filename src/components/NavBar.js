@@ -3,7 +3,6 @@ import { emphasize, styled } from '@mui/material/styles';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Chip from '@mui/material/Chip';
 import HomeIcon from '@mui/icons-material/Home';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { useNavigate } from "react-router-dom";
 import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import Userfront from '@userfront/react';
@@ -41,9 +40,6 @@ const StyledBreadcrumb = styled(Chip)(({ theme }) => {
 
 
 function handleClick(event) {
-  // look up how to get the info of an element you click on in JS, you'll want to navigate
-  // to the url/link of the breadcrumb you clicked on, the console log is an example and can be removed 
-  // or changed for debugging
   event.preventDefault();
   console.info('You clicked a breadcrumb.');
 }
@@ -86,9 +82,7 @@ export default function NavBar() {
     );
   }
   
-  function Home() {
-    // This (after connecting userFront BE (see plants.js)) is where you will grab each 
-    // plant from the user's 'plants' in the userFront DB and put it in cards props
+  function Dashboard() {
     return (
       <div>
         <h2>Home</h2>
@@ -98,11 +92,9 @@ export default function NavBar() {
   }
 
 
-  function Dashboard() {
-    //const userData = JSON.stringify(Userfront.user, null, 2);
+  function Home() {
     return (
       <div className='user-welcome'>
-        {/* <pre>{userData}</pre> */}
         {"Hello " + Userfront.user.name + "!"}
       </div>
     );
@@ -111,17 +103,12 @@ export default function NavBar() {
   function RequireAuth({ children }) {
     let location = useLocation();
     if (!Userfront.tokens.accessToken) {
-      // Redirect to the /login page
       return <Navigate to="/login" state={{ from: location }} replace />;
     }
   
     return children;
   }
   return (
-  
-    // the function 'handleClick' inside onClick in below 'presentation' div is called when 
-    // tags nested in a presentation tag are clicked (like the <StyledBreadcrumb> tags)
-    // handleClick() will need to go the link of the breadcrumb clicked
     <div role="presentation" onClick={handleClick}>
       <Breadcrumbs aria-label="breadcrumb" color="#517062">
       <StyledBreadcrumb 

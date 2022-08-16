@@ -5,10 +5,9 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import { IconButton } from '@mui/material';
-import Grid from '@mui/material/Grid';
 import OpacityIcon from '@mui/icons-material/Opacity';
 import Typography from '@mui/material/Typography';
-import { plantWatered, addPlantToUserfront } from '../utilities/userfront.js';
+import { addPlantToUserfront } from '../utilities/userfront.js';
 import { testPost } from '../api/index.js';
 import PothosImage from '../assets/images/pothos-unsplash.jpg'
 import SnakePlantImage from '../assets/images/snakeplant-unsplash.jpg'
@@ -18,11 +17,9 @@ import HinduRopeImage from '../assets/images/hinduropeplant.webp'
 import ChristmasCactusImage from '../assets/images/christmascactus.jpg'
 import ZZPlantImage from '../assets/images/zzplant-unsplash.jpg'
 import PhilodendronImage from '../assets/images/philodendron-unsplash.jpg'
-import DatePicker from 'react-date-picker'
 
 function pickImg(plant) {
   if (plant === "Pothos") {
-    console.log("found Pothos");
     return PothosImage;
   } else if (plant === "Snake Plant") {
     return SnakePlantImage;
@@ -79,15 +76,7 @@ export default function PlantCard(props) {
           {props.altPlantName} <br/> Room: {props.roomLocated} <br/> Last watered: {props.wateredLast}
           </Typography>
         </CardContent>
-        <CardActions>
-          {/* 
-
-            Back End:
-              backEndFunc(plantWatered)
-                  let NewWaterDate = today
-                  mongodb wayToWriteYourUser'sNewWaterDate // This is to store for the user for next time
-          */}
-          
+        <CardActions>        
           <IconButton size="small" aria-label="Watered Plant" onClick={testBackendPost} color="primary" ><OpacityIcon/></IconButton>
           <Button size="small" color="success">Facts about {props.plantName}</Button>
         </CardActions>

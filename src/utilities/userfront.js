@@ -3,7 +3,6 @@ Userfront.init("8b68mprb");
 
 export default function plantWatered (plant=null, newWateredDate=null) {
     let userPlants = Userfront.user.data.userPlants
-    console.log('in plantWatered?')
     if (userPlants.length > 0) {
         for (let i=0; i < userPlants; i++) {
             if (userPlants[i].plantName === plant.plantName) {
@@ -13,11 +12,9 @@ export default function plantWatered (plant=null, newWateredDate=null) {
                     day: '2-digit',
                     weekday: 'short',
                 })
-                console.log(`plant found? ${Userfront.user.data}`);
                 break;
             }
         }; 
-        console.log('here???3')
     }
     Userfront.user.update({
         data: {
@@ -41,5 +38,4 @@ export function addPlantToUserfront(plant) {
             userPlants: userPlants
         }
     });
-    console.log(Userfront.user.name);
 }

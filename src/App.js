@@ -13,7 +13,6 @@ Userfront.init("8b68mprb");
 const userPlants = [plantOne, plantTwo, plantThree, plantFour, plantFive, plantSix, plantSeven, plantEight];
 
 export default function App() {
-  console.log(userPlants)
   function ShowUserPlants() {
     if (Userfront.user && Userfront.user.hasOwnProperty('data') && Userfront.user.data.hasOwnProperty("userPlants") ) {
       return Userfront.user.data.userPlants.map(
@@ -21,7 +20,7 @@ export default function App() {
           < PlantCard className ="card-styling" key={plant.plantId}  altPlantName={plant.altPlantName} plantName={plant.plantName}
                       imageURL={plant.imgURL} roomLocated={plant.roomLocated} wateredLast={plant.wateredLast}
           />
-        ))
+        )) 
     } else {
       return <div/>
     }
@@ -41,7 +40,6 @@ export default function App() {
             justify="center"
             paddingLeft="4.5em"
           >
-            
             < ShowUserPlants />  
             <div className="spacer"/>
             {
