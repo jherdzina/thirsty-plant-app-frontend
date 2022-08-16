@@ -7,6 +7,7 @@ import PlantCard from './components/MyPlantCards'
 import { plantOne, plantTwo, plantThree, plantFour, plantFive, plantSix, plantSeven, plantEight } from './utilities/mockdata'
 import { ClassNames } from '@emotion/react';
 import Grid from '@mui/material/Grid';
+
 Userfront.init("8b68mprb");
 
 const userPlants = [plantOne, plantTwo, plantThree, plantFour, plantFive, plantSix, plantSeven, plantEight];

@@ -99,7 +99,7 @@ export default function NavBar() {
 
 
   function Dashboard() {
-    const userData = JSON.stringify(Userfront.user, null, 2);
+    // const userData = JSON.stringify(Userfront.user, null, 2);
     return (
       <div className='user-welcome'>
         {/* <pre>{userData}</pre> */}
