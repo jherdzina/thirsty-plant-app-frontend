@@ -1,5 +1,6 @@
 body {
-    background-color: #e5e5e5; 
+    background-color: #e5e5e5;
+    
 }
 
 .cards-container {
@@ -10,4 +11,16 @@ body {
 .card-styling {
     padding: 20px;
     margin: 30px;
+}
+
+.spacer {
+    background-color: #333;
+    padding: 3px;
+    margin: 0px;
+    width: 101%
+}
+
+.user-welcome {
+    font-size: 1.5em;
+    font-weight: bold;
 }

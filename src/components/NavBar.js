@@ -101,11 +101,9 @@ export default function NavBar() {
   function Dashboard() {
     const userData = JSON.stringify(Userfront.user, null, 2);
     return (
-      <div>
-        <h2>Dashboard</h2>
+      <div className='user-welcome'>
         {/* <pre>{userData}</pre> */}
-        {"Hi " + userData.name + "!"}
-        <button onClick={Userfront.logout}>Logout</button>
+        {"Hello " + Userfront.user.name + "!"}
       </div>
     );
   }
@@ -125,8 +123,9 @@ export default function NavBar() {
     // tags nested in a presentation tag are clicked (like the <StyledBreadcrumb> tags)
     // handleClick() will need to go the link of the breadcrumb clicked
     <div role="presentation" onClick={handleClick}>
-      <Breadcrumbs aria-label="breadcrumb">
+      <Breadcrumbs aria-label="breadcrumb" color="#517062">
       <StyledBreadcrumb 
+          
           component="a" 
           href="#" 
           icon={<HomeIcon fontSize="small" />}
@@ -151,12 +150,20 @@ export default function NavBar() {
           label="Dashboard"
           onClick={dashboard}
         />
-          <StyledBreadcrumb 
-          component="a" 
-          href="#" 
-          label="Reset"
-          onClick={reset}
-          />
+        <StyledBreadcrumb 
+        component="a" 
+        href="#" 
+        label="Password Reset"
+        onClick={reset}
+        />
+
+        <StyledBreadcrumb 
+        component="a" 
+        href="#" 
+        label="Logout"
+        onClick={Userfront.logout}
+        />
+
           <Routes>
             
             <Route path="/login" element={<Login />} />

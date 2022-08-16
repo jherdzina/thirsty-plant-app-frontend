@@ -1,3 +1,5 @@
+import React from "react";
+
 function error404 () {
     return (
         <main>
